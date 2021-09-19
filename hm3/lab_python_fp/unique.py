@@ -17,8 +17,6 @@ class Unique(object):
 
             self.elements[item] = item
 
-        self.length = len(items)
-
     def __next__(self):
         return next(self.elements)
 

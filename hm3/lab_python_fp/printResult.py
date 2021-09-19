@@ -1,12 +1,12 @@
 
-from random import randint
+from sys import argv
 
 
 def printResult(func):
-    def wrapper():
+    def wrapper(*args):
         print(f'\n\u001b[1;34;4m{func.__name__}\u001b[0m\n')
 
-        result = func()
+        result = func(*args)
 
         if isinstance(result, list):
             for elem in result:
