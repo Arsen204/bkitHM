@@ -1,5 +1,4 @@
 from time import sleep
-import time
 from lab_python_fp.field import fieldGenerator
 from lab_python_fp.genRandom import genGenerator
 from lab_python_fp.unique import Unique
