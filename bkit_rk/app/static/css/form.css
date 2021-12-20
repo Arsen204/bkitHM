@@ -1,0 +1,96 @@
+.right-container {
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 100%;
+    max-width: 400px;
+}
+.right-container h1:nth-of-type(1) {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 28px;
+    font-weight: 600;
+}
+.right-container .set {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+button {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    height: 38px;
+    line-height: 38px;
+    width: 50%;
+    max-width: 150px;
+    border-radius: 19px;
+    font-family: "Montserrat", sans-serif;
+    background: #fff;
+    transition: 0.2s all ease-in-out;
+}
+
+button:hover {
+    background: #171a2b;
+    color: white;
+    cursor: pointer;
+}
+
+.right-container input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+}
+
+.right-container input,
+.right-container label {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.right-container header {
+    padding-bottom: 20px;
+}
+
+.right-container label,
+.right-container input {
+    width: 176px;
+}
+
+.right-container .pets-weight .radio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pets-name label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.radio-container {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.radio-container label {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: 0.2s all ease-in-out;
+    width: 100%;
+}
+
+.radio-container input[type=radio] {
+    display: none;
+}
+
+.radio-container input[type=radio]:checked + label {
+    background: #f7b1ab;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

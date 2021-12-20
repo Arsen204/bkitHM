@@ -1,0 +1,28 @@
+<button id="myBtn">Add New Computer</button>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        {% include 'form.html' with url_val="add" button_name="Add" %}
+    </div>
+</div>
+
+<script>
+    let modal = document.getElementById("myModal");
+    let btn = document.getElementById("myBtn");
+    let span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

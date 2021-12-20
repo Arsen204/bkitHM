@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Computers{% endblock %}
+
+{% block content %}
+    <div class="main-menu">
+        <ul>
+            {% for computer in data.computers %}
+                <li>{% include 'card.html' %}</li>
+            {% empty %}
+                <li>Список пуст</li>
+            {% endfor %}
+        </ul>
+        {% include 'modal.html' %}
+    </div>
+{% endblock %}

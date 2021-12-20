@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="card">
+        <div class="card__body">
+            <h4>{{ computer.name }}</h4>
+            <p>{{ computer.processor }}</p>
+            <p>{{ computer.processor.frequency }}</p>
+        </div>
+        <div class="card__footer">
+            {% include 'form.html' with url_val='edit' url_param=computer.id button_name="Edit" %}
+            {% include 'button.html' with url_val="delete" url_param=computer.id title="Delete" %}
+        </div>
+    </div>
+</div>
+

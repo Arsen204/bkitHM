@@ -1,0 +1,26 @@
+{% if url_param %}
+    <form action="{% url url_val url_param%}" method="post" class='right-container'>
+{% else %}
+    <form action="{% url url_val %}" method="post" class='right-container'>
+{% endif %}
+    {% csrf_token %}
+    <header>
+        <div class='set'>
+            <div id='pets-name'>
+                <label for='pets-name'>Name</label>
+                <input placeholder="Computer's name" name="name" type='text'>
+            </div>
+        </div>
+        <div class='pets-weight'>
+            <label>Processor</label>
+            <div class='radio-container'>
+                {% for processor in data.processors%}
+                    <input checked='' id="{{ url_param }}{{ processor.id }}" name="processor" type='radio' value={{ processor.id }}>
+                    <label for="{{ url_param }}{{ processor.id }}">{{ processor.name }} ({{ processor.frequency }})</label>
+                {% endfor %}
+            </div>
+        </div>
+        <br>
+        <button type="submit">{{ button_name }}</button>
+    </header>
+</form>
